@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Data;
 
 
@@ -17,6 +18,7 @@ import lombok.Data;
  *
  */
 @Data
+@Builder
 @Entity
 @Table(name="user_account")
 public class UserAccount {

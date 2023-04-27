@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 27 15:17:22 ICT 2023</td>
+<td>Started on:</td><td>Thu Apr 27 16:30:00 ICT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3085 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3015 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,8 +76,10 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.danielniko.tutorial.service.UserAccountServiceTest.getSingleUserByUsername()'><b>getSingleUserByUsername</b><br>Test class: com.danielniko.tutorial.service.UserAccountServiceTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.danielniko.tutorial.model.UserAccount.getUsername()&quot; because &quot;user&quot; is null
-	at com.danielniko.tutorial.service.UserAccountServiceTest.getSingleUserByUsername(UserAccountServiceTest.java:33)
+<td><div><pre>javax.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process &apos;persist&apos; call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:299)
+	at jdk.proxy2/jdk.proxy2.$Proxy98.persist(Unknown Source)
+	at com.danielniko.tutorial.service.UserAccountServiceTest.getSingleUserByUsername(UserAccountServiceTest.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,9 +111,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1873788332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1873788332'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.danielniko.tutorial.model.UserAccount.getUsername()&quot; because &quot;user&quot; is null
-	at com.danielniko.tutorial.service.UserAccountServiceTest.getSingleUserByUsername(UserAccountServiceTest.java:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1525953166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1525953166'><pre>javax.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process &apos;persist&apos; call
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:299)
+	at jdk.proxy2/jdk.proxy2.$Proxy98.persist(Unknown Source)
+	at com.danielniko.tutorial.service.UserAccountServiceTest.getSingleUserByUsername(UserAccountServiceTest.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -145,7 +149,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.danielniko.tutorial.service.UserAccountServiceTest@f5c79a6</td></tr>
+<td>com.danielniko.tutorial.service.UserAccountServiceTest@344561e0</td></tr>
 </table><p>
 </body>
 </html>
